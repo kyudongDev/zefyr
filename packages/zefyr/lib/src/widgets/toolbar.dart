@@ -254,12 +254,12 @@ class ZefyrToolbarState extends State<ZefyrToolbar>
       buildButton(context, ZefyrToolbarAction.italic),
       LinkButton(),
       HeadingButton(),
-      buildButton(context, ZefyrToolbarAction.bulletList),
-      buildButton(context, ZefyrToolbarAction.numberList),
-      buildButton(context, ZefyrToolbarAction.quote),
-      buildButton(context, ZefyrToolbarAction.code),
-      buildButton(context, ZefyrToolbarAction.horizontalRule),
       if (editor.imageDelegate != null) ImageButton(),
+      buildButton(context, ZefyrToolbarAction.horizontalRule),
+      // buildButton(context, ZefyrToolbarAction.bulletList),
+      // buildButton(context, ZefyrToolbarAction.numberList),
+      // buildButton(context, ZefyrToolbarAction.quote),
+      // buildButton(context, ZefyrToolbarAction.code),
     ];
     return buttons;
   }
@@ -336,7 +336,8 @@ class _ZefyrButtonListState extends State<ZefyrButtonList> {
 class _DefaultZefyrToolbarDelegate implements ZefyrToolbarDelegate {
   static const kDefaultButtonIcons = {
     ZefyrToolbarAction.bold: Icons.format_bold,
-    ZefyrToolbarAction.italic: Icons.format_italic,
+    ZefyrToolbarAction.italic: Icons.colorize,
+    // ZefyrToolbarAction.italic: Icons.format_italic,
     ZefyrToolbarAction.link: Icons.link,
     ZefyrToolbarAction.unlink: Icons.link_off,
     ZefyrToolbarAction.clipboardCopy: Icons.content_copy,

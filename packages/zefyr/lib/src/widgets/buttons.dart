@@ -253,7 +253,8 @@ class _ImageButtonState extends State<ImageButton> {
     return toolbar.buildButton(
       context,
       ZefyrToolbarAction.image,
-      onPressed: showOverlay,
+      onPressed: _pickFromGallery,
+      // onPressed: showOverlay,
     );
   }
 
@@ -293,6 +294,7 @@ class _ImageButtonState extends State<ImageButton> {
       editor.formatSelection(NotusAttribute.embed.image(image));
     }
   }
+
 }
 
 class LinkButton extends StatefulWidget {
